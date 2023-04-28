@@ -1,0 +1,21 @@
+.animalCard {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.animalImageContainer {
+    width:100%;
+    overflow: hidden;
+}
+
+.animalImageContainer img {
+    max-height: 400px;
+    max-width: 400px;
+    object-fit: cover;
+}
+
+.cardText {
+    display: flex;
+    flex-direction: column;
+}
