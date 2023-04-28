@@ -9,41 +9,56 @@ import Contact from "./pages/Contact";
 import { useEffect, useState } from "react";
 
 function App() {
-  const [animals, setAnimals] = useState([]);
+  const [animals, setAnimals] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     getAnimals();
   }, []);
-  console.log("animals state", animals);
 
-  function getAnimals() {
-    let url =
-      "https://cdn.contentful.com/spaces/3buz4oreveso/environments/master/entries?access_token=qRdu9vWWuio9t0XRmoN1e_cOEZDItF9_ePajyzX0o_E";
+  async function getAnimals() {
+    let url = `https://cdn.contentful.com/spaces/3buz4oreveso/environments/master/entries?access_token=${process.env.REACT_APP_ACCESS_TOKEN}`;
 
-    fetch(url)
-      .then((response) => {
-        if (!response.ok)
-          throw new Error(`Couldn't load animals: ${response.status}`);
-        else return response.json();
-      })
-      .then((data) => {
-        setAnimals(data.items);
-        console.log("data", data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    setIsLoading(true);
+    try {
+      let res = await fetch(url);
+      let data = await res.json();
+      setAnimals(data);
+    } catch (error) {
+      console.log(error);
+    }
+    setIsLoading(false);
   }
 
   return (
     <div className="App">
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="animals" element={<Animals />} />
-        <Route path="animalprofile/:animalID" element={<AnimalProfile />} />
-        <Route path="contact" element={<Contact />} />
-      </Routes>
+      {!isLoading ? (
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route
+            path="animals"
+            element={
+              <Animals
+                animals={animals.items}
+                animalAssets={animals.includes.Asset}
+              />
+            }
+          />
+          <Route
+            path="animalprofile/:animalID"
+            element={
+              <AnimalProfile
+                animals={animals.items}
+                animalAssets={animals.includes.Asset}
+              />
+            }
+          />
+          <Route path="contact" element={<Contact />} />
+        </Routes>
+      ) : (
+        "Loading page, please wait..."
+      )}
       <Footer />
     </div>
   );
