@@ -20,6 +20,13 @@ export default function AnimalProfile({ animals, animalAssets }) {
           <li>Age:{singleAnimal.fields.age}</li>
           <li>Gender:{singleAnimal.fields.gender}</li>
         </ul>
+        <div className="tags-container">
+        {singleAnimal.fields.tags.map((item)=>{
+            return(
+                <div className="animalTag">{item}</div>
+            )
+        })}
+        </div>
       </div>
     </div>
   );
