@@ -9,7 +9,7 @@ export default function AnimalCard({ singleAnimal, animalPicture }) {
 
   return (
     <div className="animalCard">
-      <Link to={`animalprofile/${singleAnimal.fields.animalId}`}>
+      <Link to={`../animalprofile/${singleAnimal.fields.animalId}`}>
         <div className="animalImageContainer">
           <img
             src={"https:" + animalPicture.fields.file.url}
