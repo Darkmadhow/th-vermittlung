@@ -10,16 +10,16 @@ export default function AnimalProfile({animals,animalAssets}){
     return(
      <div className ="animalProfile">
         <div className= "animalImage">
-            <img src={animalImageUrl} alt={singleAnimal.Asset.fields.title} />
+            <img src={animalImageUrl} alt={singleAnimalAsset.fields.title} />
         </div>
         <div className= "description">
-            {singleAnimal.Asset.fields.description}
+            {singleAnimal.fields.description}
         </div>
         <div className="profile">
             <ul>
-                <li>Breed:</li>
-                <li>Age:</li>
-                <li>Gender:</li>
+                <li>Breed:{singleAnimal.fields.breed}</li>
+                <li>Age:{singleAnimal.fields.age}</li>
+                <li>Gender:{singleAnimal.fields.gender}</li>
              </ul>
         </div>
     </div>
