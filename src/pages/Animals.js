@@ -1,10 +1,11 @@
 import { useState } from "react";
+import AnimalCard from "../components/AnimalCard";
 
 export default function Animals({ animals, animalAssets }) {
   const [filteredAnimals, setFilteredAnimals] = useState(animals);
 
-  console.log("animals in animals", animals);
-  console.log("filteredAnimals", filteredAnimals);
+  // console.log("animals in animals", animals);
+  // console.log("filteredAnimals", filteredAnimals);
 
   function handleFilter(value) {
     const results =
@@ -12,7 +13,7 @@ export default function Animals({ animals, animalAssets }) {
       animals.filter((animal) => {
         return animal.fields.category === value;
       });
-    console.log("results", results);
+    // console.log("results", results);
     setFilteredAnimals(results);
   }
 
@@ -35,14 +36,10 @@ export default function Animals({ animals, animalAssets }) {
           Bird
         </button>
         {filteredAnimals.length
-          ? filteredAnimals.map((item) => {
+          ? filteredAnimals.map((item) => {      
+              const singleAnimalAsset = animalAssets.find((asset)=>asset.sys.id===item.fields.animalImage.sys.id);
               return (
-                <li className="animal-card">
-                  <img src={item.fields.animalImage.sys} alt="name" />
-                  <h3>{item.fields.name}</h3>
-                  <p> {item.fields.age} </p>
-                  <p> {item.fields.gender} </p>
-                </li>
+                <AnimalCard singleAnimal={item} animalPicture={singleAnimalAsset} key={singleAnimalAsset.sys.id}/>
               );
             })
           : " ...loading"}
