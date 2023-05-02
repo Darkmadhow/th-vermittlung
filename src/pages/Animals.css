@@ -1,0 +1,42 @@
+.btn-container {
+  margin: 3rem auto;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  /* border: 1px solid red; */
+}
+.btns {
+  background-color: #f9f5e3;
+  border: none;
+  width: 80%;
+  padding: 2rem;
+  border-radius: 50%;
+  font-size: large;
+}
+img.category-btn {
+  cursor: pointer;
+  width: 80%;
+  padding: 0.5rem;
+}
+
+.btn-all {
+  background-color: #f9f5e3;
+  border: none;
+  width: 80%;
+  padding: 1.5rem;
+  border-radius: 50%;
+  font-size: larger;
+  cursor: pointer;
+}
+
+.btns:hover,
+.btn-all:hover {
+  background-color: #d27452;
+}
+
+.btns:active {
+  background: white;
+  box-shadow: 2px 2px 2px #fc894d;
+  transition-property: background-color;
+}
