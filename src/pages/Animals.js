@@ -1,5 +1,10 @@
 import { useState } from "react";
 import AnimalCard from "../components/AnimalCard";
+import "./Animals.css";
+import hund from "../icons/hund.png";
+import katze from "../icons/katze.png";
+import kaninchen from "../icons/kaninchen.png";
+import papagei from "../icons/papagei.png";
 
 export default function Animals({ animals, animalAssets }) {
   const [filteredAnimals, setFilteredAnimals] = useState(animals);
@@ -19,27 +24,65 @@ export default function Animals({ animals, animalAssets }) {
 
   return (
     <div>
-      <div>
-        <button className="cat-btn" onClick={() => setFilteredAnimals(animals)}>
-          All
-        </button>
-        <button className="cat-btn" onClick={() => handleFilter("Dog")}>
-          Dog
-        </button>
-        <button className="cat-btn" onClick={() => handleFilter("Cat")}>
-          Cat
-        </button>
-        <button className="cat-btn" onClick={() => handleFilter("Rodent")}>
-          Rodent
-        </button>
-        <button className="cat-btn" onClick={() => handleFilter("Bird")}>
-          Bird
-        </button>
+      <div className="menu-container">
+        <div className="btn-container">
+          <button
+            className="btn-all"
+            onClick={() => setFilteredAnimals(animals)}
+          >
+            All animals
+          </button>
+          <button className="btns">
+            <img
+              src={hund}
+              alt="dog"
+              className="category-btn "
+              onClick={() => handleFilter("Dog")}
+            ></img>
+            Dogs
+          </button>
+
+          <button className="btns">
+            <img
+              src={katze}
+              alt="cat"
+              className="category-btn "
+              onClick={() => handleFilter("Cat")}
+            ></img>
+            Cats
+          </button>
+
+          <button className="btns">
+            <img
+              src={kaninchen}
+              alt="bunny"
+              className="category-btn "
+              onClick={() => handleFilter("Rodent")}
+            ></img>
+            Rodents
+          </button>
+
+          <button className="btns">
+            <img
+              src={papagei}
+              alt="papagei"
+              className="category-btn "
+              onClick={() => handleFilter("Bird")}
+            ></img>
+            Birds
+          </button>
+        </div>
         {filteredAnimals.length
-          ? filteredAnimals.map((item) => {      
-              const singleAnimalAsset = animalAssets.find((asset)=>asset.sys.id===item.fields.animalImage.sys.id);
+          ? filteredAnimals.map((item) => {
+              const singleAnimalAsset = animalAssets.find(
+                (asset) => asset.sys.id === item.fields.animalImage.sys.id
+              );
               return (
-                <AnimalCard singleAnimal={item} animalPicture={singleAnimalAsset} key={singleAnimalAsset.sys.id}/>
+                <AnimalCard
+                  singleAnimal={item}
+                  animalPicture={singleAnimalAsset}
+                  key={singleAnimalAsset.sys.id}
+                />
               );
             })
           : " ...loading"}

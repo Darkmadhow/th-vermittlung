@@ -1,5 +1,56 @@
-export default function Footer(){
-    return <footer>
-        This is a footer, don't look too closely
+import "./Footer.css";
+import facebook from "../icons/facebook.png";
+import instagram from "../icons/instagram.png";
+import youtube from "../icons/youtube.png";
+
+export default function Footer() {
+  return (
+    <footer className="footer-container">
+      <p className="box">
+        {" "}
+        <strong>Tiervermittlung Corporation e.V. </strong>
+      </p>
+      <p className="box">
+        Hellostrasse 40 <br></br>12478 Hellostadt <br></br> Tel. 050/ 56 477 9
+      </p>
+      <p className="box">
+        <strong> Bankverbindung:</strong> Bank der Hellostadt IBAN: DE89 1234
+        1234 1234 1234 00
+        <br></br>BIC: BLAHDE34BLA
+      </p>
+      <p className="box">
+        <li>
+          <a className="links" href="#">
+            Datenschutz
+          </a>
+        </li>
+        <li>
+          <a className="links" href="#">
+            Impressum
+          </a>
+        </li>
+        <li>
+          <a className="links" href="#">
+            Newsletter
+          </a>
+        </li>
+        <li>
+          <a className="links" href="#">
+            Jobs
+          </a>
+        </li>
+      </p>
+      <div className="social-media">
+        <a href="#">
+          <img className="social-icon" src={facebook}></img>
+        </a>
+        <a className="links" href="#">
+          <img className="social-icon" src={youtube}></img>
+        </a>
+        <a className="links" href="#">
+          <img className="social-icon" src={instagram}></img>
+        </a>
+      </div>
     </footer>
+  );
 }
