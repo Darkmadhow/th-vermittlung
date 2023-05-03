@@ -1,16 +1,17 @@
 .btn-container {
   margin: 3rem auto;
+  justify-items: center;
   width: 80%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  gap: 1rem;
+  gap: 2rem;
   /* border: 1px solid red; */
 }
 .btns {
   background-color: #f9f5e3;
   border: none;
   width: 80%;
-  padding: 2rem;
+  padding: 10%;
   border-radius: 50%;
   font-size: large;
 }
@@ -39,4 +40,13 @@ img.category-btn {
   background: white;
   box-shadow: 2px 2px 2px #fc894d;
   transition-property: background-color;
+}
+
+.animal-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  row-gap: 4rem;
+  padding: 3rem;
+  /* border: 1px solid red; */
 }
