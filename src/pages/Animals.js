@@ -72,20 +72,22 @@ export default function Animals({ animals, animalAssets }) {
             Birds
           </button>
         </div>
-        {filteredAnimals.length
-          ? filteredAnimals.map((item) => {
-              const singleAnimalAsset = animalAssets.find(
-                (asset) => asset.sys.id === item.fields.animalImage.sys.id
-              );
-              return (
-                <AnimalCard
-                  singleAnimal={item}
-                  animalPicture={singleAnimalAsset}
-                  key={singleAnimalAsset.sys.id}
-                />
-              );
-            })
-          : " ...loading"}
+        <div className="animal-cards">
+          {filteredAnimals.length
+            ? filteredAnimals.map((item) => {
+                const singleAnimalAsset = animalAssets.find(
+                  (asset) => asset.sys.id === item.fields.animalImage.sys.id
+                );
+                return (
+                  <AnimalCard
+                    singleAnimal={item}
+                    animalPicture={singleAnimalAsset}
+                    key={singleAnimalAsset.sys.id}
+                  />
+                );
+              })
+            : " ...loading"}
+        </div>
       </div>
     </div>
   );
