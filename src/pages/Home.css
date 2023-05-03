@@ -1,7 +1,7 @@
 main {
     display: flex;
     flex-direction: column;
-    font-size: 1.5rem;
+    font-size: calc(1rem + 1vw);
     background-color: #F9F5E3;
 }
 
@@ -26,6 +26,9 @@ main {
     border-radius: 2rem;
     width: 50%;
     margin: 0.25rem 0.25rem;
+}
+.yellowBG {
+    background-color: #E4DC39;
 }
 
 .imageBox {
