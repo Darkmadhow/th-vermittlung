@@ -1,21 +1,40 @@
 .animalCard {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 18rem;
+    background-color: #E4DC39;
+    border-radius: 1.5rem;
+    transition: all 0.2s;
+}
+.animalCard:hover {
+    transform: scale(1.02);
+}
+.animalCard a{
+    text-decoration: none;
+    color: black;
 }
 
 .animalImageContainer {
     width:100%;
     overflow: hidden;
+    border-top-right-radius: 1.5rem;
+    border-top-left-radius: 1.5rem;
 }
 
 .animalImageContainer img {
-    max-height: 400px;
-    max-width: 400px;
+    width: 100%;
+    height: 18rem;
     object-fit: cover;
 }
 
 .cardText {
     display: flex;
     flex-direction: column;
+    padding: 0.5rem 2rem;
+    row-gap: 0.5rem;
+}
+.cardBody {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 0.5rem;
 }

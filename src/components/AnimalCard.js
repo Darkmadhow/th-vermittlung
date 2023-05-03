@@ -17,11 +17,13 @@ export default function AnimalCard({ singleAnimal, animalPicture }) {
           />
         </div>
         <div className="cardText">
-          <div>
-            <span>{singleAnimal.fields.name}</span>
+          <div className="cardHead">
+            <h3>{singleAnimal.fields.name}</h3>
+          </div>
+          <div className="cardBody">
+            <span>{`Age: ${singleAnimal.fields.age} years`}</span>
             <span className={getGenderIcon(singleAnimal.fields.gender)}></span>
           </div>
-          <span>{`${singleAnimal.fields.age} years old`}</span>
         </div>
       </Link>
     </div>
