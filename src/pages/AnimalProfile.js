@@ -1,4 +1,6 @@
 import { useParams } from "react-router-dom";
+import "./AnimalProfile.css";
+
 export default function AnimalProfile({ animals, animalAssets }) {
   const { animalID } = useParams();
   const singleAnimal = animals.find((item) => item.fields.animalId == animalID);
@@ -10,21 +12,28 @@ export default function AnimalProfile({ animals, animalAssets }) {
 
   return (
     <div className="animalProfile">
-      <div className="animalImage">
+      <div className="animalImage" style={{
+        backgroundImage: `url(${animalImageUrl})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+      }}>
         <img src={animalImageUrl} alt={singleAnimalAsset.fields.title} />
       </div>
       <div className="desc-profile">
         <div className="description">{singleAnimal.fields.description}</div>
         <div className="profile">
+          <h3>Profile</h3>
+          <div className = "attribute-list">
           <ul>
             <li>Breed:{singleAnimal.fields.breed}</li>
             <li>Age:{singleAnimal.fields.age}</li>
             <li>Gender:{singleAnimal.fields.gender}</li>
           </ul>
+          </div>
           <div className="tags-container">
-            {singleAnimal.fields.tags.map((item) => {
+            {singleAnimal.fields.tags ? singleAnimal.fields.tags.map((item) => {
               return <div className="animalTag">{item}</div>;
-            })}
+            }):""}
           </div>
         </div>
       </div>
