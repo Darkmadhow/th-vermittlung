@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import "./AnimalProfile.css";
+import InterestForm from "../components/InterestForm";
 
 export default function AnimalProfile({ animals, animalAssets }) {
   const { animalID } = useParams();
@@ -17,18 +18,22 @@ export default function AnimalProfile({ animals, animalAssets }) {
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}>
-        <img src={animalImageUrl} alt={singleAnimalAsset.fields.title} />
+       <div className="animImg"> <img src={animalImageUrl} alt={singleAnimalAsset.fields.title} /></div>
       </div>
       <div className="desc-profile">
-        <div className="description">{singleAnimal.fields.description}</div>
+        <div className="description">
+          <h3>{singleAnimal.fields.name}</h3>
+          {singleAnimal.fields.description}</div>
         <div className="profile">
           <h3>Profile</h3>
           <div className = "attribute-list">
-          <ul>
-            <li>Breed:{singleAnimal.fields.breed}</li>
-            <li>Age:{singleAnimal.fields.age}</li>
-            <li>Gender:{singleAnimal.fields.gender}</li>
-          </ul>
+          
+          <table>
+            <tr><td>Name:</td><td>{singleAnimal.fields.name}</td></tr>
+            <tr><td>Breed:</td><td>{singleAnimal.fields.breed}</td></tr>
+            <tr><td>Age:</td><td>{singleAnimal.fields.age}</td></tr>
+            <tr><td>Gender:</td><td>{singleAnimal.fields.gender}</td></tr>
+          </table>
           </div>
           <div className="tags-container">
             {singleAnimal.fields.tags ? singleAnimal.fields.tags.map((item) => {
@@ -37,34 +42,8 @@ export default function AnimalProfile({ animals, animalAssets }) {
           </div>
         </div>
       </div>
-      <div className="interest-form">
-        <form action="#">
-          <label for="name">Name:</label>
-          <input type="text" name="name" id="name" />
-          <label for="lastName">Last Name:</label>
-          <input type="text" name= "lastName" id="lastName" />
-          
-          <label for="pets">Choose an animal:</label>
-          <select name="pets" id="pets">
-            <option value="dog">Dog</option>
-            <option value="cat">Cat</option>
-            <option value="bird">Bird</option>
-            <option value="rabbit">Rabbit</option>
-          </select>
-
-          <label for="phoneNumber">Phone Number:</label>
-           <input type="number" name="phoneNumber"/>
-           <label for="eMail">E-Mail:</label>
-           <input type="text" name="eMail"/>
-
-          <label for="message">Message:</label>
-           <textarea type="text" name="message"></textarea>
-          
-           
-           
-
-        </form>
-      </div>
+      <InterestForm singleAnimal={singleAnimal} />
+      
     </div>
   );
 }
