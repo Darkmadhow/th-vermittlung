@@ -31,7 +31,7 @@ export default function Home() {
             <img src={adopt} alt="Adopt your new best friend"></img>
           </Link>
         </div>
-        <div className="textBox">
+        <div className="textBox yellowBG">
           <h2>Adopt a Pet</h2>
           <p>
             Looking to adopt a pet?{" "}

@@ -1,7 +1,10 @@
 footer {
   margin-top: 2rem;
-  height: 35vh;
-  background-color: #e4db39cb;
+  background-color: #e4dc39;
+  font-size: 1rem;
+  /* border: 1px solid green; */
+}
+.footer {
   /* border: 1px solid red; */
 }
 
@@ -11,31 +14,32 @@ footer {
   justify-items: center;
   text-align: left;
   padding: 2rem;
+  /* border: 1px solid violet; */
 }
 
 .box {
   width: 48%;
 }
-li {
+.list-item {
   list-style: none;
 }
 .links {
   text-decoration: none;
   color: black;
 }
-li:hover {
+.list-item:hover {
   background-color: rgba(255, 255, 255, 0.308);
-  width: min-content;
+  width: max-content;
+  border-radius: 0.3rem;
 }
 .social-media {
-  width: 50%;
-  position: absolute;
-  justify-items: center;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  margin: 10rem;
-  /* border: 1px solid red; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  padding: 2rem;
+  /* border: 1px solid blue; */
 }
 .social-icon {
-  width: 30px;
+  width: 2rem;
 }

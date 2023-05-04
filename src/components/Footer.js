@@ -2,54 +2,63 @@ import "./Footer.css";
 import facebook from "../icons/facebook.png";
 import instagram from "../icons/instagram.png";
 import youtube from "../icons/youtube.png";
+import pets from "../img/haustier.png";
 
 export default function Footer() {
   return (
-    <footer className="footer-container">
-      <p className="box">
-        {" "}
-        <strong>Tiervermittlung Corporation e.V. </strong>
-      </p>
-      <p className="box">
-        Hellostrasse 40 <br></br>12478 Hellostadt <br></br> Tel. 050/ 56 477 9
-      </p>
-      <p className="box">
-        <strong> Bankverbindung:</strong> Bank der Hellostadt IBAN: DE89 1234
-        1234 1234 1234 00
-        <br></br>BIC: BLAHDE34BLA
-      </p>
-      <p className="box">
-        <li>
-          <a className="links" href="#">
-            Datenschutz
+    <footer>
+      <div className="footer">
+        <div className="footer-container">
+          <p className="box">
+            <strong>Tiervermittlung Corporation e.V. </strong>
+            <br></br>
+            <br></br>
+            <img className="social-icon" src={pets}></img>
+          </p>
+          <p className="box">
+            Hellostrasse 40 <br></br>12478 Hellostadt <br></br> Tel. 050/ 56 477
+            9
+          </p>
+          <p className="box">
+            <strong> Bankverbindung:</strong> Bank der Hellostadt IBAN: DE89
+            1234 1234 1234 1234 00
+            <br></br>BIC: BLAHDE34BLA
+          </p>
+
+          <p className="box">
+            <li className="list-item">
+              <a className="links" href="#">
+                Datenschutz
+              </a>
+            </li>
+            <li className="list-item">
+              <a className="links" href="#">
+                Impressum
+              </a>
+            </li>
+            <li className="list-item">
+              <a className="links" href="#">
+                Newsletter
+              </a>
+            </li>
+            <li className="list-item">
+              <a className="links" href="#">
+                Jobs
+              </a>
+            </li>
+          </p>
+        </div>
+        <div className="social-media">
+          <a href="#">
+            <img className="social-icon" src={facebook}></img>
           </a>
-        </li>
-        <li>
           <a className="links" href="#">
-            Impressum
+            <img className="social-icon" src={youtube}></img>
           </a>
-        </li>
-        <li>
           <a className="links" href="#">
-            Newsletter
+            <img className="social-icon" src={instagram}></img>
           </a>
-        </li>
-        <li>
-          <a className="links" href="#">
-            Jobs
-          </a>
-        </li>
-      </p>
-      <div className="social-media">
-        <a href="#">
-          <img className="social-icon" src={facebook}></img>
-        </a>
-        <a className="links" href="#">
-          <img className="social-icon" src={youtube}></img>
-        </a>
-        <a className="links" href="#">
-          <img className="social-icon" src={instagram}></img>
-        </a>
+        </div>
       </div>
     </footer>
   );
