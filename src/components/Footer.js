@@ -26,22 +26,22 @@ export default function Footer() {
           </p>
 
           <p className="box">
-            <li>
+            <li className="list-item">
               <a className="links" href="#">
                 Datenschutz
               </a>
             </li>
-            <li>
+            <li className="list-item">
               <a className="links" href="#">
                 Impressum
               </a>
             </li>
-            <li>
+            <li className="list-item">
               <a className="links" href="#">
                 Newsletter
               </a>
             </li>
-            <li>
+            <li className="list-item">
               <a className="links" href="#">
                 Jobs
               </a>

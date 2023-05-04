@@ -10,8 +10,9 @@
 .btns {
   background-color: #f9f5e3;
   border: none;
-  width: 80%;
   padding: 10%;
+  width: 125px;
+  height: 125px;
   border-radius: 50%;
   font-size: large;
 }
@@ -24,8 +25,9 @@ img.category-btn {
 .btn-all {
   background-color: #f9f5e3;
   border: none;
-  width: 80%;
   padding: 1.5rem;
+  width: 125px;
+  height: 125px;
   border-radius: 50%;
   font-size: larger;
   cursor: pointer;
@@ -44,9 +46,9 @@ img.category-btn {
 
 .animal-cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-items: center;
-  row-gap: 4rem;
+  grid-template-columns: repeat(auto-fit, 18rem);
+  justify-content: center;
+  gap: 4rem;
   padding: 3rem;
   /* border: 1px solid red; */
 }
