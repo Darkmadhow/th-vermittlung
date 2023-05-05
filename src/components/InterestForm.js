@@ -1,14 +1,17 @@
-
+import "./InterestForm.css";
 export default function InterestForm({singleAnimal}){
     return (
         <div className="interest-form">
+            <h3>Interest Form</h3>
         <form action="#">
-          <label for="name">Name:</label>
+          <div className="input-name">
+          <label htmlFor="name">Name:</label>
           <input type="text" name="name" id="name" />
-          <label for="lastName">Last Name:</label>
+          <label htmlFor="lastName">Last Name:</label>
           <input type="text" name= "lastName" id="lastName" />
-          
-          <label for="pets">Choose an animal:</label>
+          </div>
+          <div className="animal-option">
+          <label htmlFor="pets">Choose an animal:</label>
           <select name="pets" id="pets">
             {singleAnimal?<option>{singleAnimal.fields.name}</option>:null}
             
@@ -17,15 +20,21 @@ export default function InterestForm({singleAnimal}){
             <option value="bird">Bird</option>
             <option value="rabbit">Rabbit</option>
           </select>
-
-          <label for="phoneNumber">Phone Number:</label>
-           <input type="number" name="phoneNumber"/>
-           <label for="eMail">E-Mail:</label>
-           <input type="text" name="eMail"/>
-
-          <label for="message">Message:</label>
-           <textarea type="text" name="message"></textarea>
-          <button name = "submit"></button>
+          </div>
+        <div className="input-contact">
+          <label htmlFor="phoneNumber">Phone Number:</label>
+           <input type="number" name="phoneNumber" id= "tel-number"/>
+           <label htmlFor="eMail">E-Mail:</label>
+           <input type="text" name="eMail" id ="email"/>
+        </div>
+            <div className="message-box">
+          <label htmlFor="message" id="lm">Message:</label>
+           <textarea type="text" name="message" id="input-message" cols="50" rows="10"></textarea>
+           <div className="submit-button">
+        <button  type = "submit" id="btn">Submit</button>
+        </div>
+        </div>
+       
            
            
 

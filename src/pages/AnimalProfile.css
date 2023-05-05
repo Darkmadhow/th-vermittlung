@@ -1,3 +1,4 @@
+
 .animalImage {
   display: flex;
   justify-content: center;
@@ -38,14 +39,14 @@
 .desc-profile {
   display: flex;
   justify-content: center;
-  min-height: 50vh;
+  /* min-height: 50vh; */
   margin-top: 2rem;
   margin-left: 3rem;
   margin-right: 3rem;
 }
 .description {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   width: 50%;
   border-radius: 1rem;
@@ -53,6 +54,9 @@
   background-color: #f9f5e3;
   margin-right: 2rem;
   padding: 2rem;
+}
+.description h3{
+  margin-bottom:0.5rem;
 }
 
 .profile {
@@ -88,11 +92,14 @@
 }
 
 .animalTag {
-  border-radius: 50%;
-  width: 125px;
-  height: 125px;
+  border-radius: 50%; 
+  width: 100px;
+  height:100px;
   background-color: #d27452;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
+
+
