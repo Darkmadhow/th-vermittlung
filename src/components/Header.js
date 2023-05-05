@@ -9,6 +9,7 @@ export default function Header() {
         backgroundImage: `url(${backgroundImage})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
+        backgroundPosition: "40% 60%",
       }}
     >
       <div className="h1-background">
