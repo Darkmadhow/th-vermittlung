@@ -34,13 +34,13 @@ export default function Contact() {
         </div>
       </div>
       <div className="contactUs">
-        <h2>Want to tell us something?</h2>
+        <h2>Want to adopt a pet?</h2>
         <p>
           Maybe you already know which animal you want to adopt, or just send us
-          a message
+          a message! We'll get back to you.
         </p>
-        <InterestForm />
       </div>
+      <InterestForm />
     </div>
   );
 }

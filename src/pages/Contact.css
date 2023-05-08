@@ -34,8 +34,25 @@
     align-items: center;
     background-color: #F9F5E3;
     border-radius: 2rem;
+    padding: 1rem;
+}
+.contactUs h2 {
+    margin-bottom: 0.5rem;
 }
 .leaflet-container {
     height: 50vh;
     width: 50vw;
+}
+
+@media only screen and (max-width:700px){
+    .visitUs {
+        flex-direction: column;
+    }
+    .mapDesc {
+        margin-bottom: 1rem;
+        padding: 1rem;
+    }
+    .leaflet-container {
+        width: calc(100vw - 2rem);
+    }
 }
