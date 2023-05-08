@@ -2,7 +2,7 @@ import "./InterestForm.css";
 export default function InterestForm({singleAnimal}){
     return (
         <div className="interest-form">
-            <h3>Interest Form</h3>
+            <h3> Interested in adopting a pet?</h3>
         <form action="#">
           <div className="input-name">
           <label htmlFor="name">Name:</label>
