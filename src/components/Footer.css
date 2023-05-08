@@ -1,11 +1,8 @@
 footer {
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
   background-color: #e4dc39;
   font-size: 1rem;
   /* border: 1px solid green; */
-}
-.footer {
-  /* border: 1px solid red; */
 }
 
 .footer-container {
@@ -37,9 +34,20 @@ footer {
   flex-wrap: wrap;
   justify-content: center;
   gap: 3rem;
-  padding: 2rem;
+  padding: 1rem;
   /* border: 1px solid blue; */
 }
 .social-icon {
   width: 2rem;
+}
+
+@media only screen and (max-width: 700px) {
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+  }
+  .box {
+    margin: 1rem;
+  }
 }
