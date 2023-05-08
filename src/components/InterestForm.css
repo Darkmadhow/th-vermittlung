@@ -78,4 +78,42 @@
   transition-property: background-color;
 }
 
+@media only screen and (max-width:700px){
+  .interest-form label{
+    margin-top: 1rem;
+  }
+  
+  .input-name{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .animal-option{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+  }
+  .input-contact{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+  }
+  .message-box{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+  }
+  .submit-button {
+   margin-top: 1rem;
+    
+  }
+  
+
+
+
+}
 
