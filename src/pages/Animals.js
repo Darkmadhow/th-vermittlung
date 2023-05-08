@@ -39,7 +39,7 @@ export default function Animals({ animals, animalAssets }) {
               className="category-btn "
               onClick={() => handleFilter("Dog")}
             ></img>
-            Dogs
+            <p className="category-name">Dogs</p>
           </button>
 
           <button className="btns">
@@ -49,7 +49,7 @@ export default function Animals({ animals, animalAssets }) {
               className="category-btn "
               onClick={() => handleFilter("Cat")}
             ></img>
-            Cats
+            <p className="category-name">Cats</p>
           </button>
 
           <button className="btns">
@@ -59,17 +59,17 @@ export default function Animals({ animals, animalAssets }) {
               className="category-btn "
               onClick={() => handleFilter("Rodent")}
             ></img>
-            Rodents
+            <p className="category-name"> Rodents</p>
           </button>
 
           <button className="btns">
             <img
               src={papagei}
               alt="papagei"
-              className="category-btn "
+              className="category-btn"
               onClick={() => handleFilter("Bird")}
             ></img>
-            Birds
+            <p className="category-name">Birds</p>
           </button>
         </div>
         <div className="animal-cards">

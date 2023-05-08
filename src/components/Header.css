@@ -48,3 +48,15 @@ nav {
   background-color: rgba(255, 255, 255, 0.958);
   box-shadow: 2px 2px 2px #fcb690dc;
 }
+
+@media only screen and (max-width: 700px) {
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .menubtns {
+    margin: 0.5rem;
+    padding: 0.5rem;
+  }
+}
