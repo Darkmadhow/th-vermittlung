@@ -1,44 +1,62 @@
 main {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     font-size: calc(1rem + 1vw);
     background-color: #F9F5E3;
+    grid-template-areas: 'teamImg teamDesc' 'adoptDesc adoptImg' 'partImg partDesc';
+    gap: 0.5rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
 }
-
-.chapterBox {
-    display: flex;
-    flex-direction: row-reverse;
-}
-/* .chapterBox:nth-child(odd) {
-    grid-template-columns: 66% 33%;
-}
-.chapterBox:nth-child(even) {
-    grid-template-columns: 33% 66%;
-} */
 
 .textBox {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    row-gap: 1.5rem;
-    padding: 0.7rem 2rem;
+    padding: 1rem 2rem;
     background-color: #00AD34;
     border-radius: 2rem;
-    width: 50%;
-    margin: 0.25rem 0.25rem;
+    width: 100%;
 }
 .yellowBG {
     background-color: #E4DC39;
 }
 
 .imageBox {
-    width: 50%;
+    width: 100%;
     border-radius: 2rem;
     overflow: hidden;
-    margin: 0.25rem 0.25rem;
 }
 .imageBox img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+/*--------------- Grid Layout ---------------*/
+.textBox.team {
+    grid-area: teamDesc;
+}
+.imageBox.team {
+    grid-area: teamImg;
+}
+
+.textBox.adopt {
+    grid-area: adoptDesc;
+}
+.imageBox.adopt {
+    grid-area: adoptImg;
+}
+
+.textBox.participate {
+    grid-area: partDesc;
+}
+.imageBox.participate {
+    grid-area: partImg;
+}
+
+
+@media only screen and (max-width:700px){
+    main {
+        grid-template-areas: 'teamImg' 'teamDesc' 'adoptImg' 'adoptDesc' 'partImg' 'partDesc';
+    }
 }
