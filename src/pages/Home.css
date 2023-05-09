@@ -4,8 +4,7 @@ main {
     background-color: #F9F5E3;
     grid-template-areas: 'teamImg teamDesc' 'adoptDesc adoptImg' 'partImg partDesc';
     gap: 0.5rem;
-    padding-top: 1rem;
-    padding-bottom: 2rem;
+    padding: 2rem 1rem;
 }
 
 .textBox {
