@@ -8,10 +8,20 @@
 }
 .animalCard:hover {
     transform: scale(1.02);
+    box-shadow: inset 0px -3px 10px 6px #fff97c;
 }
 .animalCard a{
     text-decoration: none;
     color: black;
+}
+.animalCard h3 {
+    font-size: 1.5rem;
+}
+.animalCard span{
+    font-size: 1.4rem;
+}
+.animalCard .fa{
+    line-height: 2.5rem;
 }
 
 .animalImageContainer {

@@ -26,7 +26,7 @@ export default function Contact() {
             Hellostrasse 40 <br /> 12478 Hellostadt
           </p>
           <h3>Contact:</h3>
-          <p>Email: info@tiervermittlung-ev.de</p>
+          <p>Email: info@happy-tails-haven.de</p>
           <p>Phone: 050 / 56 477 9</p>
         </div>
         <div>
