@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="footer">
         <div className="footer-container">
           <p className="box">
-            <strong>Tiervermittlung Corporation e.V. </strong>
+            <strong>Happy Tails Haven</strong>
             <br></br>
             <br></br>
             <img className="social-icon" src={pets}></img>
@@ -20,20 +20,20 @@ export default function Footer() {
             9
           </p>
           <p className="box">
-            <strong> Bankverbindung:</strong> Bank der Hellostadt IBAN: DE89
-            1234 1234 1234 1234 00
+            <strong> Bank account:</strong> <br></br>
+            Bank Hellostadt IBAN: DE89 1234 1234 1234 1234 00
             <br></br>BIC: BLAHDE34BLA
           </p>
 
           <p className="box">
             <li className="list-item">
               <a className="links" href="#">
-                Datenschutz
+                Privacy
               </a>
             </li>
             <li className="list-item">
               <a className="links" href="#">
-                Impressum
+                Imprint
               </a>
             </li>
             <li className="list-item">

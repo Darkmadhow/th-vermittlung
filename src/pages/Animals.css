@@ -14,22 +14,23 @@
   width: 125px;
   height: 125px;
   border-radius: 50%;
-  font-size: large;
+  font-size: 1.2rem;
+  font-family: "Darumadrop One";
+  cursor: pointer;
 }
 img.category-btn {
-  cursor: pointer;
   width: 80%;
-  padding: 0.5rem;
 }
 
 .btn-all {
   background-color: #f9f5e3;
   border: none;
-  padding: 1.5rem;
+  padding: 1.3rem;
   width: 125px;
   height: 125px;
   border-radius: 50%;
-  font-size: larger;
+  font-size: 1.4rem;
+  font-family: "Darumadrop One";
   cursor: pointer;
 }
 
@@ -43,7 +44,9 @@ img.category-btn {
   box-shadow: 2px 2px 2px #fc894d;
   transition-property: background-color;
 }
-
+p.category-name {
+  line-height: 0;
+}
 .animal-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, 18rem);
