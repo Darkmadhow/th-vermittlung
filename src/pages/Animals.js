@@ -32,43 +32,23 @@ export default function Animals({ animals, animalAssets }) {
           >
             All animals
           </button>
-          <button className="btns">
-            <img
-              src={hund}
-              alt="dog"
-              className="category-btn "
-              onClick={() => handleFilter("Dog")}
-            ></img>
+          <button className="btns" onClick={() => handleFilter("Dog")}>
+            <img src={hund} alt="dog" className="category-btn "></img>
             <p className="category-name">Dogs</p>
           </button>
 
-          <button className="btns">
-            <img
-              src={katze}
-              alt="cat"
-              className="category-btn "
-              onClick={() => handleFilter("Cat")}
-            ></img>
+          <button className="btns" onClick={() => handleFilter("Cat")}>
+            <img src={katze} alt="cat" className="category-btn "></img>
             <p className="category-name">Cats</p>
           </button>
 
-          <button className="btns">
-            <img
-              src={kaninchen}
-              alt="bunny"
-              className="category-btn "
-              onClick={() => handleFilter("Rodent")}
-            ></img>
+          <button className="btns" onClick={() => handleFilter("Rodent")}>
+            <img src={kaninchen} alt="bunny" className="category-btn "></img>
             <p className="category-name"> Rodents</p>
           </button>
 
-          <button className="btns">
-            <img
-              src={papagei}
-              alt="papagei"
-              className="category-btn"
-              onClick={() => handleFilter("Bird")}
-            ></img>
+          <button className="btns" onClick={() => handleFilter("Bird")}>
+            <img src={papagei} alt="papagei" className="category-btn"></img>
             <p className="category-name">Birds</p>
           </button>
         </div>
