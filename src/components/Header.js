@@ -13,7 +13,7 @@ export default function Header() {
       }}
     >
       <div className="h1-background">
-        <h1>Animal Shelter</h1>
+        <h1>HAPPY TAILS HAVEN</h1>
       </div>
       <nav>
         <NavLink className="menubtns" to="/">
