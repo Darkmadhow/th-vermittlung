@@ -20,7 +20,7 @@ export default function Header() {
           Home
         </NavLink>
         <NavLink className="menubtns" to="animals">
-          See our Animals
+          Our Animals
         </NavLink>
         <NavLink className="menubtns" to="contact">
           Contact
