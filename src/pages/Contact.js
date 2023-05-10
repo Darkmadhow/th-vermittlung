@@ -29,9 +29,7 @@ export default function Contact() {
           <p>Email: info@happy-tails-haven.de</p>
           <p>Phone: 050 / 56 477 9</p>
         </div>
-        <div>
-          <Map />
-        </div>
+        <Map />
       </div>
       <div className="contactUs">
         <h2>Want to adopt a pet?</h2>
